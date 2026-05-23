@@ -2,7 +2,7 @@
   "name": "markdown-context-injector",
   "displayName": "Markdown Context Injector",
   "description": "Inline @ completions to insert workspace-relative file & folder paths into Markdown — ideal for prepping LLM context blocks (Claude Code, Cursor, etc.).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "rodolfosarabo",
   "license": "MIT",
   "icon": "images/icon.png",
