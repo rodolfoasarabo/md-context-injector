@@ -1,4 +1,4 @@
-# MD Context Injector
+# Markdown Context Injector
 
 A VS Code / Cursor extension that lets you quickly insert workspace-relative file and folder paths into Markdown files using inline `@`-completions.
 
@@ -33,8 +33,8 @@ The `@` is preserved by design — most LLM tooling expects the `@path/to/file` 
 
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mdContextInjector.useDefaultExcludes` | `boolean` | `true` | Include the built-in exclude list (`node_modules`, `.git`, `build`, `out`, `dist`, `.next`, `.cache`, `.turbo`, `coverage`, `.fvm`, `.dart_tool`, `android`, `ios`, `.run`). |
-| `mdContextInjector.excludePatterns` | `string[]` | `[]` | Additional glob patterns to exclude from the picker. Merged with the defaults unless `useDefaultExcludes` is `false`. |
+| `markdownContextInjector.useDefaultExcludes` | `boolean` | `true` | Include the built-in exclude list (`node_modules`, `.git`, `build`, `out`, `dist`, `.next`, `.cache`, `.turbo`, `coverage`, `.fvm`, `.dart_tool`, `android`, `ios`, `.run`). |
+| `markdownContextInjector.excludePatterns` | `string[]` | `[]` | Additional glob patterns to exclude from the picker. Merged with the defaults unless `useDefaultExcludes` is `false`. |
 
 Both settings have `resource` scope, so you can configure them per workspace folder.
 
@@ -44,7 +44,7 @@ Both settings have `resource` scope, so you can configure them per workspace fol
 
 ```json
 {
-  "mdContextInjector.excludePatterns": [
+  "markdownContextInjector.excludePatterns": [
     "**/*.lock",
     "**/__snapshots__/**",
     "**/tmp/**"
@@ -56,8 +56,8 @@ If you want to fully take over the exclude list (no defaults), set:
 
 ```json
 {
-  "mdContextInjector.useDefaultExcludes": false,
-  "mdContextInjector.excludePatterns": [
+  "markdownContextInjector.useDefaultExcludes": false,
+  "markdownContextInjector.excludePatterns": [
     "**/node_modules/**",
     "**/my-private-folder/**"
   ]
@@ -74,7 +74,7 @@ yarn compile     # one-shot webpack build
 yarn watch       # rebuild on save
 ```
 
-Press `F5` in VS Code to launch an Extension Development Host with the extension loaded. Logs appear in the **Output** panel under the channel **"MD Context Injector"**.
+Press `F5` in VS Code to launch an Extension Development Host with the extension loaded. Logs appear in the **Output** panel under the channel **"Markdown Context Injector"**.
 
 ## Requirements
 

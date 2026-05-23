@@ -4,7 +4,7 @@ import path from 'path';
 
 const TRIGGER_CHARACTER = '@';
 
-const CONFIG_NAMESPACE = 'mdContextInjector';
+const CONFIG_NAMESPACE = 'markdownContextInjector';
 const CONFIG_USE_DEFAULTS = 'useDefaultExcludes';
 const CONFIG_USER_PATTERNS = 'excludePatterns';
 
@@ -206,19 +206,19 @@ class PathCompletionProvider implements vscode.CompletionItemProvider {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	output = vscode.window.createOutputChannel('MD Context Injector');
+	output = vscode.window.createOutputChannel('Markdown Context Injector');
 	output.appendLine('Extension activated');
 
 	index = new WorkspaceIndex(output);
 	index.register(context);
 
 	const insertPathCommand = vscode.commands.registerCommand(
-		'md-context-injector.insertPath',
+		'markdown-context-injector.insertPath',
 		() => insertWorkspaceRelativePath()
 	);
 
 	const refreshCommand = vscode.commands.registerCommand(
-		'md-context-injector.refreshIndex',
+		'markdown-context-injector.refreshIndex',
 		async () => {
 			output.appendLine('Manual index refresh requested');
 			index.invalidate();

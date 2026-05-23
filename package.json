@@ -1,6 +1,6 @@
 {
-  "name": "md-context-injector",
-  "displayName": "MD Context Injector",
+  "name": "markdown-context-injector",
+  "displayName": "Markdown Context Injector",
   "description": "Inline @ completions to insert workspace-relative file & folder paths into Markdown — ideal for prepping LLM context blocks (Claude Code, Cursor, etc.).",
   "version": "0.1.0",
   "publisher": "rodolfosarabo",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodolfoasarabo/md-context-injector.git"
+    "url": "https://github.com/rodolfoasarabo/markdown-context-injector.git"
   },
   "bugs": {
-    "url": "https://github.com/rodolfoasarabo/md-context-injector/issues"
+    "url": "https://github.com/rodolfoasarabo/markdown-context-injector/issues"
   },
-  "homepage": "https://github.com/rodolfoasarabo/md-context-injector#readme",
+  "homepage": "https://github.com/rodolfoasarabo/markdown-context-injector#readme",
   "keywords": [
     "markdown",
     "llm",
@@ -44,31 +44,31 @@
   "contributes": {
     "commands": [
       {
-        "command": "md-context-injector.insertPath",
+        "command": "markdown-context-injector.insertPath",
         "title": "LLM Context: Insert Workspace Relative Path"
       },
       {
-        "command": "md-context-injector.refreshIndex",
+        "command": "markdown-context-injector.refreshIndex",
         "title": "LLM Context: Refresh File Index"
       }
     ],
     "keybindings": [],
     "configuration": {
-      "title": "MD Context Injector",
+      "title": "Markdown Context Injector",
       "properties": {
-        "mdContextInjector.useDefaultExcludes": {
+        "markdownContextInjector.useDefaultExcludes": {
           "type": "boolean",
           "default": true,
-          "description": "Whether to include the built-in default exclude patterns (node_modules, .git, build, dist, .next, coverage, Flutter/iOS/Android folders, etc.). Disable to fully control the exclude list yourself via `mdContextInjector.excludePatterns`.",
+          "description": "Whether to include the built-in default exclude patterns (node_modules, .git, build, dist, .next, coverage, Flutter/iOS/Android folders, etc.). Disable to fully control the exclude list yourself via `markdownContextInjector.excludePatterns`.",
           "scope": "resource"
         },
-        "mdContextInjector.excludePatterns": {
+        "markdownContextInjector.excludePatterns": {
           "type": "array",
           "items": {
             "type": "string"
           },
           "default": [],
-          "markdownDescription": "Additional glob patterns to exclude from the `@` file picker. These are merged with the built-in defaults unless `#mdContextInjector.useDefaultExcludes#` is `false`.\n\nExamples:\n- `**/*.lock`\n- `**/tmp/**`\n- `**/__snapshots__/**`",
+          "markdownDescription": "Additional glob patterns to exclude from the `@` file picker. These are merged with the built-in defaults unless `#markdownContextInjector.useDefaultExcludes#` is `false`.\n\nExamples:\n- `**/*.lock`\n- `**/tmp/**`\n- `**/__snapshots__/**`",
           "scope": "resource"
         }
       }
