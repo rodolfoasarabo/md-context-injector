@@ -1,0 +1,17 @@
+# Build output
+out
+dist
+*.vsix
+
+# Dependencies
+node_modules
+
+# Test runtime
+.vscode-test/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor metadata (keep .vscode/ checked in for shared launch/tasks config)
+.idea/

@@ -1,0 +1,74 @@
+{
+  "name": "md-context-injector",
+  "displayName": "MD Context Injector",
+  "description": "Inject full file paths for LLM work",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown",
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "md-context-injector.insertPath",
+        "title": "LLM Context: Insert Workspace Relative Path"
+      },
+      {
+        "command": "md-context-injector.refreshIndex",
+        "title": "LLM Context: Refresh File Index"
+      }
+    ],
+    "keybindings": [],
+    "configuration": {
+      "title": "MD Context Injector",
+      "properties": {
+        "mdContextInjector.useDefaultExcludes": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to include the built-in default exclude patterns (node_modules, .git, build, dist, .next, coverage, Flutter/iOS/Android folders, etc.). Disable to fully control the exclude list yourself via `mdContextInjector.excludePatterns`.",
+          "scope": "resource"
+        },
+        "mdContextInjector.excludePatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "markdownDescription": "Additional glob patterns to exclude from the `@` file picker. These are merged with the built-in defaults unless `#mdContextInjector.useDefaultExcludes#` is `false`.\n\nExamples:\n- `**/*.lock`\n- `**/tmp/**`\n- `**/__snapshots__/**`",
+          "scope": "resource"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.120.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
