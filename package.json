@@ -1,12 +1,39 @@
 {
   "name": "md-context-injector",
   "displayName": "MD Context Injector",
-  "description": "Inject full file paths for LLM work",
-  "version": "0.0.1",
+  "description": "Inline @ completions to insert workspace-relative file & folder paths into Markdown — ideal for prepping LLM context blocks (Claude Code, Cursor, etc.).",
+  "version": "0.1.0",
+  "publisher": "rodolfosarabo",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "author": {
+    "name": "Rodolfo Sarabó"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodolfoasarabo/md-context-injector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodolfoasarabo/md-context-injector/issues"
+  },
+  "homepage": "https://github.com/rodolfoasarabo/md-context-injector#readme",
+  "keywords": [
+    "markdown",
+    "llm",
+    "ai",
+    "claude",
+    "cursor",
+    "context",
+    "completions",
+    "file picker",
+    "at-mention",
+    "prompt"
+  ],
   "engines": {
     "vscode": "^1.105.0"
   },
   "categories": [
+    "AI",
     "Other"
   ],
   "activationEvents": [
@@ -59,16 +86,16 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.120.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
-    "eslint": "^9.39.3",
-    "typescript": "^5.9.3",
-    "ts-loader": "^9.5.4",
-    "webpack": "^5.105.3",
-    "webpack-cli": "^6.0.1",
+    "@types/vscode": "~1.105.0",
     "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "webpack": "^5.105.3",
+    "webpack-cli": "^6.0.1"
   }
 }
