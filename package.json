@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodolfoasarabo/markdown-context-injector.git"
+    "url": "https://github.com/rodolfoasarabo/md-context-injector.git"
   },
   "bugs": {
-    "url": "https://github.com/rodolfoasarabo/markdown-context-injector/issues"
+    "url": "https://github.com/rodolfoasarabo/md-context-injector/issues"
   },
-  "homepage": "https://github.com/rodolfoasarabo/markdown-context-injector#readme",
+  "homepage": "https://github.com/rodolfoasarabo/md-context-injector#readme",
   "keywords": [
     "markdown",
     "llm",
