@@ -4,6 +4,8 @@ A VS Code / Cursor extension that lets you quickly insert workspace-relative fil
 
 Perfect for prepping prompts and context blocks for LLM tooling (Claude Code, Cursor, ChatGPT, etc.) that expects repository-relative paths like `@src/components/Button.tsx`.
 
+https://github.com/user-attachments/assets/6e848add-b5cb-43a3-bed0-52bd1e7bb84b
+
 ## Features
 
 - **Inline `@` picker.** Type `@` in any Markdown file and get a native IntelliSense-style popup at the cursor with all workspace files and folders.
